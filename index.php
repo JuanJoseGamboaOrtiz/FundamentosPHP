@@ -66,5 +66,87 @@
      */
     $array=[];
     var_dump($array);
+    /**
+     !! 9 Números y operadores
+     */
+
+     $numero1=20;
+     $numero2=10;
+     $numero3=15;
+     $numero4='20';
+
+     /**
+      * Operador Mayor que >
+      */
+     var_dump($numero1 > $numero2);
+     echo '<br>';
+
+    /**
+     * Operador Menor que <
+     */
+     var_dump($numero1 < $numero2);
+     echo '<br>';
+
+     /**
+     * Operador Mayor o igual  >=
+     */
+    var_dump($numero1 >= $numero2);
+    echo '<br>';
+
+     /**
+     * Operador Menor o igual  <=
+     */
+    var_dump($numero1 <= $numero2);
+    echo '<br>';
+
+    /**
+     * Operador igual ==
+     */
+    var_dump($numero1 == $numero2);
+    echo '<br>';
+    /**
+     * Operador estrictamente igual ===
+     */
+    var_dump($numero1 == $numero4);
+    echo '<br>';
+
+    /**
+     * * -1 Si izquierda es menor,
+     * * 0 Si es igual,
+     * * 1 Si izquierda es mayor
+     */
+
+    var_dump($numero1 <=> $numero2);
+    echo '<br>';
+
+    $nombreCliente= "Juan Cliente";
+
+    /**
+    * *Conocer extension de un string
+    */
+
+    echo strlen($nombreCliente);
+    var_dump($nombreCliente);
+
+    /**
+     * * Eliminar espacios en blanco
+     */
+    $texto=trim($nombreCliente);
+    var_dump($tetxo);
+    /**
+     * * Convertirlo a mayusculas
+     */
+    echo strtoupper($nombreCliente);
+
+    /**
+     * * Convertir a minusculas
+     */
+      echo strtolower($nombreCliente);
+
+    /**
+     * * Revisar si un string existe o no
+     */
+
+     echo strpos($nombreCliente,'Pedro');
     
 ?>
