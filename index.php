@@ -39,4 +39,32 @@
   *Variable númerica 
    */
   define ('PI',3.1415);
+
+  /**
+   !! 8. Tipos de datos
+   ** Boolean
+   */
+   $logueado=true;
+   var_dump($logueado);
+   /**
+    * *Enteros
+    */
+    $numero=200;
+    var_dump($numero);
+    /**
+     * *Floats
+     */
+    $float=200.5;
+    var_dump($numero);
+    /**
+     * *Strings
+     */
+    $nombre="Juan";
+
+    /**
+     * *Array
+     */
+    $array=[];
+    var_dump($array);
+    
 ?>
