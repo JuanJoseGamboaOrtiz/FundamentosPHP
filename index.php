@@ -19,6 +19,24 @@
  
  $cadena=sprintf("Hola $",$texto);
 
- 
- 
+ /*
+  !! 7.Variables y constantes 
+  * Variable númerica
+  */
+  $edad=25;
+
+  /*
+  *Variable de texto
+   */
+  $texto="Texto";
+  /*
+   * Variable Booleana
+   */
+  $es_valido=true;
+
+  /*
+  *Constantes
+  *Variable númerica 
+   */
+  define ('PI',3.1415);
 ?>
