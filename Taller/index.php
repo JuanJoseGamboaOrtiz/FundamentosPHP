@@ -9,21 +9,17 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio4</h1>
+            <h1>Ejercicio5</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="">Gravedades de los planetas del sistema solar</label>
+                <label for="">Masa de la flota de naves especiales</label>
                 <input type="submit" value="Mostrar">
             </form>
             <div class="resultado">
                 <?php
-                    if (isset($_GET["gravedades"])) { 
-                        $planetas= urldecode($_GET["gravedades"]);
-                        $planetas=json_decode($planetas, true);
-
-                        
-                        foreach ($planetas as $key => $valor) {
-                          echo "El planeta " . $key . "Tiene un gravedad de " . $valor ." m/s^2 <br>";
-                        }
+                    if (isset($_GET["masaFlota"])) { 
+                    
+                        echo "La masa total de toda la flota es " . $_GET['masaFlota'] . 'Tn';
+                    
                     }
                 ?>
             </div>
