@@ -1,24 +1,18 @@
 <?php
 
-$flotaNaves=[
-  'Nave1'=> 28.04,
-  'Nave2'=> 35.15,
-  'Nave3'=> 62.24,
-  'Nave4'=> 42.74,
-  'Nave5'=> 99.03,
-  'Nave6'=> 80.19,
-  'Nave7'=> 21.37,
-
-];
+$planetas=["SOL","MERCURIO","VENUS","TIERRA","MARTE","JUPITER","SARTURNO","URANO","NEPTUNO"];
 
 
+$mayus=strtoupper($_POST['nombre']);
+$texto='';
+var_dump($mayus);
+if(in_array($mayus,$planetas)){
+  $texto="El planeta " . $mayus . ' Si está en el sistema Solar';
+}else{
+  $texto="El planeta " . $mayus . ' No está en el sistema Solar';
+}
 
-$masaFlota=array_sum($flotaNaves);
 
-
-
-header('Location: index.php?masaFlota='. urlencode($masaFlota));
-
-
+header('Location: index.php?existe=' . urlencode($texto) );
 
 ?>

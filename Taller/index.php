@@ -9,17 +9,16 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio5</h1>
+            <h1>Ejercicio6</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="">Masa de la flota de naves especiales</label>
-                <input type="submit" value="Mostrar">
+                <label for="name">Nombre del planeta</label>
+                <input type="text" name="nombre" placeholder="Ingrese el Planeta a Buscar" >
+                <input type="submit" value="Buscar">
             </form>
             <div class="resultado">
                 <?php
-                    if (isset($_GET["masaFlota"])) { 
-                    
-                        echo "La masa total de toda la flota es " . $_GET['masaFlota'] . 'Tn';
-                    
+                    if (isset($_GET["existe"])) { 
+                        echo $_GET["existe"];
                     }
                 ?>
             </div>
