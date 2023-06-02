@@ -9,16 +9,16 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio6</h1>
+            <h1>Ejercicio7</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="name">Nombre del planeta</label>
-                <input type="text" name="nombre" placeholder="Ingrese el Planeta a Buscar" >
+                <label for="name">Tipo de nave</label>
+                <input type="text" name="tipo" placeholder="Ingrese el tipo de nave" >
                 <input type="submit" value="Buscar">
             </form>
             <div class="resultado">
                 <?php
-                    if (isset($_GET["existe"])) { 
-                        echo $_GET["existe"];
+                    if (isset($_GET["existe"])) {
+                        echo $_GET['existe']; 
                     }
                 ?>
             </div>

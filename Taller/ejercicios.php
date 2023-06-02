@@ -1,18 +1,14 @@
 <?php
 
-$planetas=["SOL","MERCURIO","VENUS","TIERRA","MARTE","JUPITER","SARTURNO","URANO","NEPTUNO"];
+$tipoNaves=["crusero","consular","exploracion"];
 
-
-$mayus=strtoupper($_POST['nombre']);
-$texto='';
-var_dump($mayus);
-if(in_array($mayus,$planetas)){
-  $texto="El planeta " . $mayus . ' Si está en el sistema Solar';
+$texto = '';
+if(in_array(strtolower(str_replace(' ', '',$_POST['tipo'])), $tipoNaves)){
+ $texto = 'El tipo de nave EXISTE';
 }else{
-  $texto="El planeta " . $mayus . ' No está en el sistema Solar';
+  $texto = 'El tipo de nave NO EXISTE';
 }
 
-
-header('Location: index.php?existe=' . urlencode($texto) );
+header('Location: index.php?existe=' . urlencode($texto));
 
 ?>
