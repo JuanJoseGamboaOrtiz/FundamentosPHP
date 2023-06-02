@@ -9,20 +9,20 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio3</h1>
+            <h1>Ejercicio4</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="">Planetas Habitables del sistema Solar</label>
+                <label for="">Gravedades de los planetas del sistema solar</label>
                 <input type="submit" value="Mostrar">
             </form>
             <div class="resultado">
                 <?php
-                    if (isset($_GET["planetas"])) { 
-                        $planetas= urldecode($_GET["planetas"]);
+                    if (isset($_GET["gravedades"])) { 
+                        $planetas= urldecode($_GET["gravedades"]);
                         $planetas=json_decode($planetas, true);
 
                         
-                        foreach ($planetas as $key => $planeta) {
-                          echo "Planeta " . $key . "<br>";
+                        foreach ($planetas as $key => $valor) {
+                          echo "El planeta " . $key . "Tiene un gravedad de " . $valor ." m/s^2 <br>";
                         }
                     }
                 ?>
