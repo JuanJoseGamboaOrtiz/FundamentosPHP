@@ -9,11 +9,10 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio2</h1>
+            <h1>Ejercicio3</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="">Ingrese el número de planetas</label>
-                <input type="text" placeholder="Número de planetas" name="numero"> 
-                <input type="submit" value="Enviar">
+                <label for="">Planetas Habitables del sistema Solar</label>
+                <input type="submit" value="Mostrar">
             </form>
             <div class="resultado">
                 <?php
@@ -23,7 +22,7 @@
 
                         
                         foreach ($planetas as $key => $planeta) {
-                          echo "Planeta " . $key . ": " . $planeta . "<br>";
+                          echo "Planeta " . $key . "<br>";
                         }
                     }
                 ?>
