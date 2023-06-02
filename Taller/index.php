@@ -9,17 +9,22 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio1</h1>
+            <h1>Ejercicio2</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="">Ingrese el número del planeta</label>
-                <input type="text" placeholder="Número del planeta" name="numero"> 
+                <label for="">Ingrese el número de planetas</label>
+                <input type="text" placeholder="Número de planetas" name="numero"> 
                 <input type="submit" value="Enviar">
             </form>
             <div class="resultado">
                 <?php
-                    if (isset($_GET["resultado"])) {
-                    $resultado = $_GET["resultado"];
-                    echo $resultado;
+                    if (isset($_GET["planetas"])) { 
+                        $planetas= urldecode($_GET["planetas"]);
+                        $planetas=json_decode($planetas, true);
+
+                        
+                        foreach ($planetas as $key => $planeta) {
+                          echo "Planeta " . $key . ": " . $planeta . "<br>";
+                        }
                     }
                 ?>
             </div>

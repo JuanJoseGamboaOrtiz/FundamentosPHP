@@ -1,21 +1,18 @@
 <?php
 
-$numero=intval($_POST['numero']);
+$numPlanetas=intval($_POST['numero']);
 
-$planetas=[
-    "sol"=>1,
-    "mercurio"=>2,
-    "venus"=>3,
-    "tierra"=>4,
-    "marte"=>5,
-    "jupiter"=>6,
-    "saturno"=>7,
-    "urano"=>8,
-    "neptuno"=>9
-];
+if(isset($numPlanetas)){
+    $planetas = array();
 
-$resultado=array_flip($planetas)[$numero];
+    for ($i = 0; $i < $numPlanetas; $i++) {
+      $planetas[$i] = "Deshabitado";
+    }
+
+    $planetasStr = json_encode($planetas);
+
+    header('Location: index.php?planetas='. urlencode($planetasStr));
+}
 
 
-header("Location: index.php?resultado=" . urlencode($resultado));
 ?>
