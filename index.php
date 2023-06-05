@@ -467,6 +467,116 @@
     var_dump(isset($cliente['codigo']));
 
     
+      /**
+     !! 12 Estructuras de Control
+ 
+     ** Las estructuras de control en programación son herramientas que se utilizan para controlar el flujo
+      **de ejecución de un programa. Estas estructuras permiten que el programa tome decisiones y realice
+      **diferentes acciones en función de ciertas condiciones.
+
+
+
+     !! 12.1 Estructuras condicionales
+      **Las estructuras condicionales son una estructura de control de flujo en programación que permite que
+      **el programa tome decisiones basadas en si se cumple o no una condición. En otras palabras, una
+      **estructura condicional permite que el programa ejecute diferentes bloques de código en función de
+      **si se cumple o no una determinada condición.
+
+     !! 12.1.1 if
+     */
+
+     if(10>3){
+      echo "10 es mayor que 3";
+     }
+
+     if(10<3){
+      echo "10 es mayor que 3";
+     }else{
+      echo "3 es mayor que 10";
+     }
+
+     if(10>3){
+      //Instrucciones
+     }else if(10<20){
+      //Instrucciones
+     }else{
+      //Instrucciones
+     }
+
+    /**
+     !! 12.1.2 Switch 
+     ** En PHP, el "switch" es una estructura de control que permite ejecutar diferentes bloques de código
+     ** dependiendo del valor de una variable.
+     ** La sintaxis básica del switch en PHP es la siguiente:
+     * */ 
+
+     $numero=5;
+     switch ($numero){
+      case 3:
+        echo "El número es 3";
+        break;
+      case 5:
+        echo "El número es 5";
+        break;
+      default:
+        echo "El número no es ni 3 ni 5";
+      break;
+     }
+
+     /**
+      * Ejemplos
+      ** Ejemplo de if
+      */
+
+      $autenticado=true;
+      $admin=false;
+      
+
+      if($autenticado && $admin){
+        echo "Usuario autenticado correctamente";
+      }else{
+        echo "Usuario no autenticado, inicia sesión";
+      }
+
+      /**
+       ** Ejemplo de Else if
+       */
+
+       $cliente=[
+        'nombre'=> "Juan",
+        'saldo'=>0,
+        'informacion'=>[
+          'tipo'=>'Regular'
+        ]
+       ];
+
+       if($cliente['saldo']>0){
+        echo "El cliente tiene saldo";
+       }else if($cliente['informaicion']['tipo']==='premium'){
+        echo "El cliente es premium";
+       }else{
+        echo "No hay cliente definido o no tiene saldo o no es premium";
+       }
+
+       /**
+       ** Ejemplo de switch
+       */
+
+       echo "<br>";
+
+       $tecnologia='HTML';
+
+       switch($tecnologia){
+        case 'HTML':
+          echo "PHP,un excelente lenguaje";
+          break;
+        case 'JavaScript':
+          echo "Genial, el lenguaje de la web";
+          break;
+        default:
+          echo "ALgún otro lenguaje";
+          break;
+       }
 
 
 
