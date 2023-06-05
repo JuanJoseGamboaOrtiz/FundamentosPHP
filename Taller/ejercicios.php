@@ -1,18 +1,9 @@
 <?php
 
-$alienigenas=[
-  "Midicloriano",
-  "Twi'lek",
-  "Ewok",
-  "Gungan",
-  "Trandoshano",
-  "Asogiano",
-  "Asogiano",
-  "Ewok",
-  "Midicloriano",
-  "Kel Dor"];
+$planetas1=["Venus","Tierra","Marte","Neptuno","Urano","Pluton","Saturno","Jupiter"];
+$planetas2=["Pluto","Sedna","Marte","Quaoar","Urano","Pluton","Saturno","Jupiter"];
 
-$texto=array_unique($alienigenas);
+$texto=array_intersect($planetas1,$planetas2);
 
 header('Location: index.php?existe=' . urlencode(json_encode($texto)));
 
