@@ -419,8 +419,63 @@
       array_walk($fruits, 'test_print');
 
 
+     /**
+     !! 11 Isset() y Empty()
+ 
+     ** Son funciones utilizadas para saber si una variable ha sido declarada o si tiene un valor definido o no
+     */
 
-        
+     $miVariable="Hola";
+
+     if(isset($miVariable)){
+      echo "La variable está definida y tiene un valor";
+     }else{
+      echo "La variable no está definida o no tiene un valor";
+     }
+
+     $miVariable="";
+
+     if(empty($miVariable)){
+      echo "La variable está vacía o no está definida";
+     }else{
+      echo "La variable tiene un valor";
+     }
+
+     $clientes=[];
+     $clientes2=array();
+     $cliente3=array("Pedro","Juan","Karen");
+     $cliente=[
+      'nombre'=>"Juan",
+      'saldo'=>200
+     ];
+
+     /**
+      * * Isset- Revisar si un arreglo está creado o una propiedad está definida
+      */
+
+      echo "<br>";
+      var_dump(isset($cliente4));
+      var_dump(isset($cliente));
+      var_dump(isset($cliente2));
+      var_dump(isset($cliente3));
+  
+    /**
+    * Isset permite revisar si una propiedad de un arreglo asociativo existe!
+    */
+
+    var_dump(isset($cliente['nombre']));
+    var_dump(isset($cliente['codigo']));
+
+    
+
+
+
+
+
+     
+
+
+
 
       
 ?>
