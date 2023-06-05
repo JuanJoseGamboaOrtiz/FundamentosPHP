@@ -9,26 +9,35 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio 11</h1>
+            <h1>Ejercicio 12</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="name">Devuelve dos arrays con los planetas unicos de cada sistema</label>
-                <input type="submit" value="Generar Array">
+                <label for="planeta">Agrega un satelite a un planeta especifico</label>
+                <select name="planeta" id="planeta">
+                    <option value="0" selected disabled>--SELECCIONE--</option>
+                    <option value="Mercurio">Mercurio</option>
+                    <option value="Venus">venus</option>
+                    <option value="Tierra">Tierra</option>
+                    <option value="Marte">Marte</option>
+                    <option value="Jupiter">Jupiter</option>
+                    <option value="Saturno">Saturno</option>
+                    <option value="Urano">Urano</option>
+                    <option value="Neptuno">Neptuno</option>
+                </select>
+                <input type="text" name="satelite" placeholder="Escriba el satelite">
+                <input type="submit" value="Añadir Satelite al planeta">
             </form>
             <div class="resultado">
                 <?php
-                    if (isset($_GET["existe"]) && isset($_GET["existe2"])){
+                    if (isset($_GET["existe"])){
 
                         $texto= json_decode($_GET["existe"], true);
-                        $texto1= json_decode($_GET["existe2"], true);
-                        echo "El array con los planetas unicos del primer sistema" ; 
+                        echo "El array con los satelites del planeta selccionado es" ; 
+
                         echo "<pre>";
                         var_dump($texto);
                         echo "</pre>";
-                        echo "<br>";
-                        echo "El array con los planetas unicos del segundo sistema" ; 
-                        echo "<pre>";
-                        var_dump($texto1);
-                        echo "</pre>";
+
+                        var_dump($_GET["planeta"]);
                     }
                 ?>
             </div>

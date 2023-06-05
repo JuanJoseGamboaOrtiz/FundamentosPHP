@@ -1,11 +1,38 @@
 <?php
 
-$planetas1=["Venus","Tierra","Marte","Neptuno","Urano","Pluton","Saturno","Jupiter"];
-$planetas2=["Pluto","Sedna","Marte","Quaoar","Urano","Pluton","Saturno","Jupiter"];
+$satelite=$_POST['satelite'];
+$planeta=$_POST['planeta'];
 
-$texto=array_diff($planetas1,$planetas2);
-$texto2=array_diff($planetas2,$planetas1);
+$planetas=[
+  "Mercurio"=> [
+    "satelites"=>[]
+  ],
+  "Venus"=> [
+    "satelites"=>[]
+  ],
+  "Tierra"=> [
+    "satelites"=>[]
+  ],
+  "Marte"=> [
+    "satelites"=>[]
+  ],
+  "Jupiter"=> [
+    "satelites"=>[]
+  ],
+  "Saturno"=> [
+    "satelites"=>[]
+  ],
+  "Urano"=> [
+    "satelites"=>[]
+  ],
+  "Neptuno"=> [
+    "satelites"=>[]
+  ]
+];
 
-header('Location: index.php?existe=' . urlencode(json_encode($texto)) . '&existe2=' . urlencode(json_encode($texto2)));
+
+array_push($planetas[$planeta]['satelites'],$satelite);
+
+header('Location: index.php?existe=' . urlencode(json_encode($planetas[$planeta]['satelites'])) . '&planeta=' . urlencode(json_encode($planetas)));
 
 ?>
