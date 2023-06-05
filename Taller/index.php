@@ -9,18 +9,25 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio 10</h1>
+            <h1>Ejercicio 11</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="name">Devuelve un array con los planetas en ambos sistemas </label>
+                <label for="name">Devuelve dos arrays con los planetas unicos de cada sistema</label>
                 <input type="submit" value="Generar Array">
             </form>
             <div class="resultado">
                 <?php
-                    if (isset($_GET["existe"])) {
+                    if (isset($_GET["existe"]) && isset($_GET["existe2"])){
+
                         $texto= json_decode($_GET["existe"], true);
-                        echo "El array con los planetas iguales" ; 
+                        $texto1= json_decode($_GET["existe2"], true);
+                        echo "El array con los planetas unicos del primer sistema" ; 
                         echo "<pre>";
                         var_dump($texto);
+                        echo "</pre>";
+                        echo "<br>";
+                        echo "El array con los planetas unicos del segundo sistema" ; 
+                        echo "<pre>";
+                        var_dump($texto1);
                         echo "</pre>";
                     }
                 ?>
