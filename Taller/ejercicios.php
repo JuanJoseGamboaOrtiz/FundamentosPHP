@@ -1,13 +1,8 @@
 <?php
 
-$tipoNaves=["crusero","consular","exploracion"];
+$planetas=["Mercurio","Venus","Tierra","Marte","Jupiter","Saturno","Urano","Neptuno"];
 
-$texto = '';
-if(in_array(strtolower(str_replace(' ', '',$_POST['tipo'])), $tipoNaves)){
- $texto = 'El tipo de nave EXISTE';
-}else{
-  $texto = 'El tipo de nave NO EXISTE';
-}
+$texto=array_rand(array_flip($planetas));
 
 header('Location: index.php?existe=' . urlencode($texto));
 
