@@ -9,15 +9,19 @@
 <body>
     <div class="ejercicios">
         <div class="ejercicio">
-            <h1>Ejercicio8</h1>
+            <h1>Ejercicio9</h1>
             <form action="ejercicios.php" method="POST">
-                <label for="name">Seleccionar un planeta al azar para una misión espacial</label>
-                <input type="submit" value="Seleccionar planeta">
+                <label for="name">Devuelve un array sin alienigenas repetidos</label>
+                <input type="submit" value="Generar Array">
             </form>
             <div class="resultado">
                 <?php
                     if (isset($_GET["existe"])) {
-                        echo "El planeta seleccionado es  ".$_GET['existe']; 
+                        $texto= json_decode($_GET["existe"], true);
+                        echo "El array sin alienigenas repetidos es" ; 
+                        echo "<pre>";
+                        var_dump($texto);
+                        echo "</pre>";
                     }
                 ?>
             </div>

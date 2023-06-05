@@ -1,9 +1,19 @@
 <?php
 
-$planetas=["Mercurio","Venus","Tierra","Marte","Jupiter","Saturno","Urano","Neptuno"];
+$alienigenas=[
+  "Midicloriano",
+  "Twi'lek",
+  "Ewok",
+  "Gungan",
+  "Trandoshano",
+  "Asogiano",
+  "Asogiano",
+  "Ewok",
+  "Midicloriano",
+  "Kel Dor"];
 
-$texto=array_rand(array_flip($planetas));
+$texto=array_unique($alienigenas);
 
-header('Location: index.php?existe=' . urlencode($texto));
+header('Location: index.php?existe=' . urlencode(json_encode($texto)));
 
 ?>
