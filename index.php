@@ -334,7 +334,7 @@
       * *array_rand(): Devuelve una o varias claves aleatorias de un array.
       */
 
-      var_dump($aleatoria=array_rand($array));
+      var_dump(array_rand($array1));
 
        /**
       * *array_unique(): Elimina los valores duplicados de un array.
@@ -409,13 +409,18 @@
       /**
       * *array_walk(): Aplica una función de devolución de llamada a cada elemento de un array.
       */  
+
+      function test_print($elemento2, $clave){
+        echo "$clave. $elemento2<br />\n";
+        }
+
       $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
-      echo "Before ...:\n";
+
       array_walk($fruits, 'test_print');
 
 
 
-
+        
 
       
 ?>
