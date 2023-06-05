@@ -579,6 +579,67 @@
        }
 
 
+       /**
+       !! 13 Estructuras Repetitivas 
+      ** Las estructuras repetitivas, también conocidas como estructuras de control de bucle, son
+      ** herramientas fundamentales en la programación que permiten repetir la ejecución de un bloque de
+      ** código varias veces. Estas estructuras son utilizadas cuando se desea realizar una tarea repetitiva sin
+      ** tener que escribir el mismo código una y otra vez.
+     * */ 
+
+
+     /**
+      * While
+      ** Es una estructura que repite el codigo mientras se cumpla una condición
+      ** Ejemplo
+      */
+
+      $i=0;
+
+      while($i<10){
+        echo $i ."<br/>";
+
+        $i++;
+      }
+
+     /**
+      * Do While
+      ** FUnciona igual que el while con la unica diferencia que ejecuta el codigo almenos una vez
+      */
+
+      $i=100;
+
+      do{
+        echo $i ."<br>";
+        $i++;
+      }while($i<10);
+
+      /**
+       * For es una estructura de control que repite el codigo una cantidad determinada de veces
+       */
+
+       $clientes = array('Pedro','Juan','Karen');
+
+       foreach($clientes as $cliente):
+          echo $cliente .'<br>';
+       endforeach;
+
+       $cliente=[
+        'nombre' => 'Juan',
+        'saldo' => 200,
+        'tipo'=> 'Premium'
+       ];
+
+      foreach($cliente as $key => $valor):
+        echo $key . " - " . $valor . '<br/>';
+     endforeach;
+
+
+
+
+     
+
+
 
 
 
