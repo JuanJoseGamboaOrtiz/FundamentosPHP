@@ -634,6 +634,38 @@
         echo $key . " - " . $valor . '<br/>';
      endforeach;
 
+      /**
+      !! 14 Funciones
+        **En programación, las funciones definidas por el usuario son bloques de código que se pueden llamar
+        **y ejecutar en cualquier parte de un programa para realizar una tarea específica. Estas funciones
+        **permiten que el código sea modular y reutilizable, lo que facilita la programación y el
+        **mantenimiento del código.
+     * */ 
+
+     /**
+      * ? Funciones que no retornan valor 
+      */
+
+      function sumar(int $numero1 = 0, int $numero2) : void {
+        echo $numero1+ $numero2;
+       }
+ 
+       sumar(10,3);
+ 
+     /**
+       * ? Funciones que  retornan valor 
+       */
+      
+       function usuarioAutenticado(bool $autenticado) : ?string{
+         if($autenticado){
+           return "El usuario esta autenticado ";
+         }else{
+           return null;
+         }
+       }
+       echo "<br>";
+       $usuario = usuarioAutenticado(true);
+       echo $usuario;
 
 
 
