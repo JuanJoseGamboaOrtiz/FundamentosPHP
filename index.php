@@ -668,11 +668,35 @@
        echo $usuario;
 
 
-
-     
-
-
-
-
+      /**
+      !! 14 include, require, include_once, require_once
+      **En PHP, include, require, include_once y require_once son funciones que se utilizan para incluir
+      **archivos externos en un programa.
+      **include y include_once permiten incluir un archivo PHP en el programa. La diferencia entre ellas es
+      **que include puede incluir el mismo archivo varias veces mientras que include_once asegura que el
+      **archivo solo se incluya una vez en el programa.
+      **require y require_once son similares a include y include_once, pero en caso de que el archivo no
+      **pueda ser encontrado, se detendrá la ejecución del programa. Al utilizar require_once, se asegura que
+      **el archivo solo se incluya una vez en el programa.
+     * */
       
 ?>
+
+<!DOCTYPE html>
+     <html lang="en">
+     <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/styles.css">
+      <title>Document</title>
+     </head>
+     <body>
+      
+       <header>
+        <?php include ('includes/header.php')?>
+      </header>
+
+
+     </body>
+     </html>
