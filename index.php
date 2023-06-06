@@ -697,6 +697,65 @@
         <?php include ('includes/header.php')?>
       </header>
 
+      <?php
+    
+    /**
+     *    !! 15 json_encode() y json_decode
+     ** La función json_encode() en PHP se utiliza para convertir una estructura de datos en PHP en una
+     ** cadena JSON.
+     * */
+
+     $productos=[
+      [
+        'nombre'=> 'Tablet',
+        'precio'=> 200,
+        'disponible'=> true
+      ],
+      [
+        'nombre'=> 'Televisión 24"',
+        'precio'=> 300,
+        'disponible'=> true
+      ],
+      [
+        'nombre'=> 'Monitor Curvo',
+        'precio'=> 400,
+        'disponible'=> false
+      ],
+    ];
+    $json='{"nombre":"Jose Manuel","edad":16,"ciudad":"Nueva york"}';
+    $data=json_decode($json);
+    ?>
+
+    <h1>Uso de JSON Example</h1>
+
+    <pre class="resultado">
+      <?php
+
+      var_dump($productos);
+      $json=json_encode($productos,JSON_UNESCAPED_UNICODE);
+      echo '<echo>';
+
+      var_dump($json);
+      ?>
+    </pre>
+
+    <table class="contenido">
+      <thead>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Ciudad</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><?php echo $data->nombre?></td>
+          <td><?php echo $data->edad?></td>
+          <td><?php echo $data->ciudad?></td>
+        </tr>
+      </tbody>
+    </table>
 
      </body>
      </html>
+
+
+
