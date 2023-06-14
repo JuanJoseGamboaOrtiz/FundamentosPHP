@@ -802,10 +802,56 @@
     **   private: Los miembros declarados como private solo son accesibles desde dentro de la
     **   misma clase en la que se definen. No pueden ser accedidos desde fuera de la clase, ni
     **   siquiera por las clases heredadas.
-    
+
     **   protected: Los miembros declarados como protected son accesibles desde dentro de la
     **   misma clase y desde las clases heredadas (subclases). Sin embargo, no pueden ser accedidos
     **   desde fuera de la clase directamente.
+
+
+    * !! Clases
     * */
+
+    class Persona{
+       
+
+       public function __construct(private string $nombre,protected int $edad){
+        $this->$nombre=$nombre;
+        $this->$edad=$edad;
+       }
+
+       public function getNombre(){
+        return $this->$nombre;
+       }
+       
+       public function setNombre($name){
+        $this->$nombre=$name;
+       }
+
+       public function getEdad(){
+        return $this->$edad;
+       }
+
+       public function setEdad($edad){
+        $this->$edad=$edad;
+       }
+
+       private function saludar(){
+        echo "Hola, mi nombre es " . $this-> $nombre;
+       }
+
+      /**
+       * Instaciar Clases
+       */
+
+    }
+
+    $alumno= new Persona('Jose Manuel', 18);
+
+    ?>
+
+    <pre>
+      <?php echo $alumno->getNombre();?>
+      <?php echo $alumno->getEdad();?>
+    </pre>
 
      
