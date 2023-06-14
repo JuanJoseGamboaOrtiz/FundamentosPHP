@@ -785,10 +785,27 @@
     **   clase que se utiliza como base se denomina "clase padre" o "superclase", y la clase que se
     **   deriva se llama "clase hija" o "subclase". La herencia permite la reutilización de código y la
     **   creación de jerarquías de clases.
-    
+
     **   Polimorfismo: Es la capacidad de un objeto de tomar diferentes formas o comportarse de
     **   diferentes maneras según el contexto. Permite utilizar una interfaz común para objetos de
     **   diferentes clases y proporciona flexibilidad y extensibilidad en el diseño de programas.
+
+    * !! Modificadores de acceso en PHP
+
+    **  Los modificadores de acceso son palabras clave utilizadas en la programación orientada a objetos
+    **  para controlar la visibilidad y el acceso a los miembros (atributos y métodos) de una clase. Estos
+    **  modificadores permiten establecer qué partes del código pueden acceder y modificar dichos
+    **  miembros.
+    **  public: Los miembros declarados como public son accesibles desde cualquier lugar, ya sea
+    **  desde dentro de la clase, desde las clases heredadas o desde fuera de la clase. Son visibles para todos.
+
+    **   private: Los miembros declarados como private solo son accesibles desde dentro de la
+    **   misma clase en la que se definen. No pueden ser accedidos desde fuera de la clase, ni
+    **   siquiera por las clases heredadas.
+    
+    **   protected: Los miembros declarados como protected son accesibles desde dentro de la
+    **   misma clase y desde las clases heredadas (subclases). Sin embargo, no pueden ser accedidos
+    **   desde fuera de la clase directamente.
     * */
 
      
