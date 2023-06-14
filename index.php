@@ -754,8 +754,7 @@
       </tbody>
     </table>
 
-     </body>
-     </html>
+     
 
     <?php
      /**
@@ -815,24 +814,24 @@
        
 
        public function __construct(private string $nombre,protected int $edad){
-        $this->$nombre=$nombre;
-        $this->$edad=$edad;
+        $this->nombre=$nombre;
+        $this->edad=$edad;
        }
 
        public function getNombre(){
-        return $this->$nombre;
+        return $this->nombre;
        }
        
        public function setNombre($name){
-        $this->$nombre=$name;
+        $this->nombre=$name;
        }
 
        public function getEdad(){
-        return $this->$edad;
+        return $this->edad;
        }
 
        public function setEdad($edad){
-        $this->$edad=$edad;
+        $this->edad=$edad;
        }
 
        private function saludar(){
@@ -849,9 +848,12 @@
 
     ?>
 
-    <pre>
+    <pre class='resultado'>
+    
       <?php echo $alumno->getNombre();?>
       <?php echo $alumno->getEdad();?>
     </pre>
 
      
+    </body>
+  </html>
