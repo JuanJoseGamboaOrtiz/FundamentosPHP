@@ -854,6 +854,69 @@
       <?php echo $alumno->getEdad();?>
     </pre>
 
-     
+    <?php
+    /**
+     * !! Metodos estaticos
+     ** En programación, un método estático es un método que pertenece a la clase en sí y no a una
+     ** instancia específica de la clase. A diferencia de los métodos de instancia, los métodos estáticos se
+     ** pueden llamar directamente en la clase sin necesidad de crear un objeto o instancia de la misma.
+     *
+     * ? Caracteristicas importantes
+     ** No requieren una instancia: Los métodos estáticos se pueden invocar directamente desde la
+     ** clase, utilizando la sintaxis Clase::metodoEstatico(), sin necesidad de crear un objeto de la
+     ** clase.
+     ** No pueden acceder a propiedades de instancia: Los métodos estáticos no pueden acceder
+     ** directamente a las propiedades de instancia de la clase, ya que no tienen una instancia
+     ** específica asociada. Solo pueden acceder a propiedades estáticas (variables estáticas) que
+     ** pertenezcan a la clase.
+     ** No pueden utilizar $this: En un método estático, no se puede utilizar la palabra clave $this
+     ** para hacer referencia a la instancia actual de la clase, ya que no hay una instancia asociada.
+     ** Útiles para utilidades compartidas: Los métodos estáticos son útiles para definir funciones o
+     ** utilidades que no dependen del estado de una instancia específica. Se pueden utilizar para
+     ** operaciones globales, cálculos matemáticos, acceso a bases de datos, manipulación de
+     ** archivos, etc.
+     */
+
+     class Persona{
+      private string $nombre;
+      protected int $edad;
+      private static $nombreAux;
+
+      public function __construct($nombre,$edad){
+        $this->nombre=$nombre;
+        $this->edad=$edad;
+        self::$nombreAux=$nombre;
+      }
+
+      public function getNombre(){
+        return $this->nombre;
+      }
+
+      public function setNombre($name){
+        $this->nombre=$name;
+      }
+
+      public function getEdad(){
+        return $this->edad;
+      }
+
+      public function setEdad($edad){
+        $this->edad=$edad;
+      }
+
+      public static function saludar(){
+        return '<br> Hola como estas ' .self::$nombreAux;
+      }
+
+     }
+
+     $alumno= new Persona("Juan José",24,"Very");
+    ?>
+    <pre class='resultado'>
+      <?php echo $alumno->getNombre();?>
+      <?php echo $alumno->getEdad();?>
+      <?php echo Persona::saludar();?>
+    </pre>   
+
     </body>
   </html>
