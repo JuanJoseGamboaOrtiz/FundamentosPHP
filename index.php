@@ -1000,6 +1000,68 @@
         <h2>El gato hace</h2>
         <?php echo $garfield->hacerSonido()?>
       </pre> 
-      
+    <?php
+    /**
+     * !! Interfaces
+     **En la programación orientada a objetos, una interfaz es una estructura que define un conjunto de
+     **métodos que una clase debe implementar. Es un contrato que especifica qué métodos debe
+     **proporcionar una clase sin especificar cómo se implementan esos métodos.  
+     */
+
+     interface Figura{
+        public function calcularArea();
+     }
+
+     class Circulo implements Figura{
+        private $radio;
+
+        public function __construct($radio) {
+          $this->radio=$radio;
+        }
+
+        public function calcularArea()
+        {
+          return pi()* pow($this->radio,2);
+        }
+     }
+
+     $circulo=new Circulo(5);
+     echo $circulo->calcularArea();
+
+     /**
+      * ? En PHP, es posible lograr herencia entre interfaces mediante la utilización de la palabra clave
+      * ? extends. Esto permite extender una interfaz existente para agregar nuevos métodos o requerir la
+      * ? implementación de métodos adicionales.
+      */
+
+      interface Figura3D extends Figura{
+        public function calcularVolumen();
+      }
+
+      class Cubo implements Figura3D{
+        private $lado;
+
+        public function __construct($lado)
+        {
+          $this->lado=$lado;
+        }
+
+        public function calcularArea()
+        {
+          return 6 * pow($this->lado,2);
+        }
+
+        public function calcularVolumen()
+        {
+          return pow($this->lado,3);
+        }
+      }
+
+      $cubo= new Cubo(5);
+      echo $cubo->calcularArea();
+      echo '<br>';
+      echo $cubo->calcularVolumen();
+    ?>
+
     </body>
   </html>
