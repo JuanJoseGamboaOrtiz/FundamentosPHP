@@ -957,5 +957,49 @@
     </pre>   
 
 
+    /**
+     * !! Clases Abstractas
+     ** En PHP, una clase abstracta es una clase que no se puede instanciar directamente, sino que sirve
+     **como una plantilla o base para otras clases. Se utiliza para definir la estructura común y los métodos
+     **que deben implementar las clases hijas.
+     */
+
+    <?php
+    abstract class Animal{
+      abstract public function hacerSonido();
+    }
+
+    class Perro extends Animal{
+      public function __construct(){
+
+      }
+      
+      public function hacerSonido(){
+        echo "¡Guau!";
+      }
+    }
+
+    class Gato extends Animal{
+      public function __construct(){}
+
+      public function hacerSonido(){
+        echo "Miua";
+      }
+    }
+
+    $pluto=new Perro();
+    $garfield=new Gato();
+    ?>
+
+    <h1> Clases Abstractas</h1>
+      <pre class='resultado'>
+        <h2>El perro hace</h2>
+        <?php echo $pluto->hacerSonido()?>
+      </pre>  
+      <pre class='resultado'>
+        <h2>El gato hace</h2>
+        <?php echo $garfield->hacerSonido()?>
+      </pre> 
+      
     </body>
   </html>
