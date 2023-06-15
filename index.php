@@ -1061,7 +1061,68 @@
       echo $cubo->calcularArea();
       echo '<br>';
       echo $cubo->calcularVolumen();
+
+      /**
+     * !! Polimorfismo
+    **El polimorfismo en la programación orientada a objetos es un concepto que permite tratar objetos
+    **de diferentes clases de manera uniforme, utilizando una interfaz común. Se basa en la capacidad de
+    **los objetos de una jerarquía de clases de responder de manera diferente a la misma llamada de
+    **método.
+     */
+
+     interface TransporteInterfaz{
+      public function getInfo():string;
+      public function getRuedas():int;
+     }
+
+     class Transport implements TransporteInterfaz{
+      public function __construct(protected int $ruedas,protected int $capacidad){
+        
+      }
+
+      public function getInfo():string{
+        return "El transporte tiene ". $this->ruedas . " ruedas y una capacidad de " . $this->capacidad . " personas";
+      }
+
+      public function getRuedas(): int
+      {
+        return $this-> ruedas;
+      }
+      
+     }
+
+     class Automo extends Transport implements TransporteInterfaz{
+      public function __construct(protected int $ruedas,protected int $capacidad,protected string $color)
+      {
+        
+      }
+
+      public function getInfo() : string{
+        return "El transporte tiene ". $this->ruedas . " ruedas y una capacidad de " . $this->capacidad . " personas y tiene el color " .$this->color;
+       }
+      
+      public function getColor(){
+        return "El color es " . $this->color;
+      }
+     }
+
+     echo "<pre>";
+
+     var_dump($transporte= new Transport(8,20));
+     var_dump($auto= new Automo(4,4,"Rojo"));
+
+     echo  $transporte->getInfo();
+     echo "<br>";
+
+     echo $auto->getColor();
+     echo "<br>";
+
+     echo $auto->getInfo();
+     echo "<br>";
+
     ?>
+
+
 
     </body>
   </html>
