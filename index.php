@@ -811,38 +811,37 @@
     * */
 
     class Persona{
-       
+      private string $nombre;
+      protected int $edad;
+      private static $nombreAux;
 
-       public function __construct(private string $nombre,protected int $edad){
+      public function __construct($nombre,$edad){
         $this->nombre=$nombre;
         $this->edad=$edad;
-       }
+        self::$nombreAux=$nombre;
+      }
 
-       public function getNombre(){
+      public function getNombre(){
         return $this->nombre;
-       }
-       
-       public function setNombre($name){
+      }
+
+      public function setNombre($name){
         $this->nombre=$name;
-       }
+      }
 
-       public function getEdad(){
+      public function getEdad(){
         return $this->edad;
-       }
+      }
 
-       public function setEdad($edad){
+      public function setEdad($edad){
         $this->edad=$edad;
-       }
+      }
 
-       private function saludar(){
-        echo "Hola, mi nombre es " . $this-> $nombre;
-       }
+      public static function saludar(){
+        return '<br> Hola como estas ' .self::$nombreAux;
+      }
 
-      /**
-       * Instaciar Clases
-       */
-
-    }
+     }
 
     $alumno= new Persona('Jose Manuel', 18);
 
@@ -877,38 +876,7 @@
      ** archivos, etc.
      */
 
-     class Persona{
-      private string $nombre;
-      protected int $edad;
-      private static $nombreAux;
-
-      public function __construct($nombre,$edad){
-        $this->nombre=$nombre;
-        $this->edad=$edad;
-        self::$nombreAux=$nombre;
-      }
-
-      public function getNombre(){
-        return $this->nombre;
-      }
-
-      public function setNombre($name){
-        $this->nombre=$name;
-      }
-
-      public function getEdad(){
-        return $this->edad;
-      }
-
-      public function setEdad($edad){
-        $this->edad=$edad;
-      }
-
-      public static function saludar(){
-        return '<br> Hola como estas ' .self::$nombreAux;
-      }
-
-     }
+  
 
      $alumno= new Persona("Juan José",24,"Very");
     ?>
@@ -917,6 +885,77 @@
       <?php echo $alumno->getEdad();?>
       <?php echo Persona::saludar();?>
     </pre>   
+
+    <?php
+    /**
+     * !! Herencia
+     **  La herencia en programación es un concepto que permite crear nuevas clases basadas en clases
+     **  existentes, aprovechando y extendiendo su funcionalidad. La clase existente se conoce como clase
+     **  base o clase padre, mientras que la nueva clase creada se llama clase derivada o clase hija.
+     *
+     * ? Conceptos importantes
+     **Clase base / Clase padre: Es la clase original de la cual se deriva una nueva clase. Define los
+     **atributos y métodos básicos que serán heredados por las clases derivadas.
+
+     **Clase derivada / Clase hija: Es la nueva clase creada que se basa en la clase base. Hereda los
+     **atributos y métodos de la clase base y puede agregar nuevos atributos y métodos, así como
+     **modificar o ampliar los existentes.
+
+     **Herencia simple y herencia múltiple: La herencia simple se refiere a la relación en la que una
+     **clase derivada hereda de una sola clase base. Por otro lado, la herencia múltiple se refiere a
+     **la relación en la que una clase derivada hereda de múltiples clases base. No todos los lenguajes
+     **de programación admiten la herencia múltiple.
+
+     **Polimorfismo: El polimorfismo es la capacidad de un objeto de una clase derivada para ser
+     **tratado como un objeto de su clase base. Esto permite utilizar una referencia de la clase base
+     **para manipular objetos de diferentes clases derivadas sin tener que conocer la clase concreta
+     **en tiempo de compilación.
+     */
+
+
+     class Transporte{
+      public function __construct(protected int $ruedas,protected int $capacidad){
+
+      }
+
+      public function getInfo() : string{
+        return "El transporte tiene " . $this->ruedas . " ruedas y una capacidad de " . $this->capacidad . " personas";      
+      }
+
+      public function getRuedas():int{
+        return $this->ruedas;
+      }
+    }
+
+
+     class Bicicleta extends Transporte{
+        public function getInfo() :  string {
+          return "El transporte tiene " . $this->ruedas . " ruedas y una capacidad de " . $this->capacidad . " personas y No gasta gasolina";   
+        }
+     }
+
+     class Automovil extends Transporte{
+      public function __construct(protected int $ruedas,protected int $capacidad,protected string $transmision){
+
+      }
+
+      public function getTransmision():string{
+        return $this->transmision;
+      }
+    }
+
+    $bicicleta= new Bicicleta(2,1);
+    $auto = new Automovil(4,4,'Manual');
+    ?>
+    <pre class='resultado'>
+      <?php echo $bicicleta->getInfo();?>
+      <?php echo $bicicleta->getRuedas();?>
+    </pre>   
+    <pre class='resultado'>
+      <?php echo $auto->getInfo();?>
+      <?php echo $auto->getTransmision();?>
+    </pre>   
+
 
     </body>
   </html>
