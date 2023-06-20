@@ -1,8 +1,10 @@
 <?php
+namespace App;
 
 class Detalles{
 
-    public function __construct(public string $descripcion){
+    public function __construct(){
+        echo "Desde la clase de Detalles</br>";
     }
 
     static public function hola():void{

@@ -1,8 +1,14 @@
 <?php
+use App\Clientes;
+use App\Detalles;
+
 function my_autoload($clase){
-  require __DIR__.'/clases/'.$clase. '.php';
+  $fileClass=explode('\\',$clase);
+  require __DIR__.'/clases/'.$fileClass[1]. '.php';
  }
  spl_autoload_register('my_autoload');
+
+
 /**
  * !! 5. Introducción a PHP
  * * Es necesaria la estructura  <?php?> para indicar que es codigo PHP 
