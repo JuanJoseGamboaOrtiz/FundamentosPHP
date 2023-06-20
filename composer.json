@@ -1,0 +1,16 @@
+{
+    "name": "apolt01-032/fundamentos-php",
+    "description": "Prueba",
+    "autoload": {
+        "psr-4": {
+            "App\\":"./clases"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan José Gamboa",
+            "email": "juangamboaortiz@gmail.com"
+        }
+    ],
+    "require": {}
+}
