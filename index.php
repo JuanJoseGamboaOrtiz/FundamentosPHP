@@ -1,4 +1,8 @@
 <?php
+function my_autoload($clase){
+  require __DIR__.'/clases/'.$clase. '.php';
+ }
+ spl_autoload_register('my_autoload');
 /**
  * !! 5. Introducción a PHP
  * * Es necesaria la estructura  <?php?> para indicar que es codigo PHP 
@@ -1120,6 +1124,21 @@
      echo $auto->getInfo();
      echo "<br>";
 
+       /**
+     * !! Autoload
+    **En PHP, el autoloading (carga automática) es una técnica que permite cargar automáticamente las
+    **clases cuando son necesarias, sin tener que incluir manualmente los archivos de clase en cada punto
+    **del código. Esto facilita el desarrollo y el mantenimiento del código, ya que no es necesario
+    **preocuparse por incluir los archivos de clase de forma explícita.El autoloading en PHP se basa en la función spl_autoload_register(), que permite registrar una o
+    **varias funciones de autoload. Estas funciones se ejecutan automáticamente cuando se intenta
+    **utilizar una clase que aún no ha sido cargada.
+     */
+    
+     $detalles=new Detalles("desrcipcion");
+
+      var_dump($detalles);
+
+      Detalles::hola();
     ?>
 
 
