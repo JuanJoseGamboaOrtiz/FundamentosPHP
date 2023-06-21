@@ -1194,8 +1194,16 @@ use App\Detalles;
 
       **Confidencialidad: Es más fácil mantener la confidencialidad de la información si el
       **almacenamiento de los datos está centralizado en una ubicación.
+
+     * !! PHP Avanzado - Entidades y Atributos
+      **Las entidades son categorías de cosas que son importantes para un negocio y sobre las que se debe
+      **conservar información. Las entidades contienen datos e información que el negocio debe conocer y
+      **recordar.
+
+
       */
 
+      
     ?>
 
 
