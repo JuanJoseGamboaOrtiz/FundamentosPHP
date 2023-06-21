@@ -1142,6 +1142,60 @@ use App\Detalles;
       var_dump($detalles);
 
       Detalles::hola();
+
+
+      /**
+     * !! PHP Avanzado - Integración de php con Bases de datos relacionale s(Mysql)
+      **La integración de bases de datos con PHP es una tarea común en el desarrollo web, ya que PHP es un
+      **lenguaje de programación ampliamente utilizado para crear aplicaciones dinámicas y sitios web
+      **interactivos. PHP proporciona una variedad de extensiones y funciones para trabajar con diferentes
+      **sistemas de gestión de bases de datos relacionales, como MySQL, PostgreSQL, Oracle, entre otros.
+
+
+
+      * ? Bases de datos relacionales
+
+      **Las bases de datos relacionales son un tipo de sistema de gestión de bases de datos (SGBD) que
+      **organiza la información en tablas estructuradas y establece relaciones entre ellas. Estas bases de datos
+      **se basan en el modelo relacional propuesto por Edgar Codd en la década de 1970.
+      **En una base de datos relacional, la información se almacena en tablas compuestas por filas y
+      **columnas. Cada tabla representa una entidad o concepto en el dominio del problema, y cada fila de la
+      **tabla corresponde a una instancia específica de esa entidad. Las columnas representan atributos o
+      **características de la entidad.
+
+      **Las relaciones entre las tablas se establecen mediante claves primarias y claves foráneas. Una clave
+      **primaria es un atributo o conjunto de atributos que identifica de forma única cada fila en una tabla.
+      **Una clave foránea es un atributo en una tabla que hace referencia a la clave primaria de otra tabla,
+      **estableciendo así una relación entre ellas. Estas relaciones permiten conectar la información entre
+      **diferentes tablas y realizar consultas y operaciones complejas.Las bases de datos relacionales se basan en el lenguaje de consulta estructurado (SQL, por sus siglas
+      **en inglés) para interactuar con los datos. SQL proporciona un conjunto de comandos y sentencias para
+      **realizar consultas, inserciones, actualizaciones y eliminaciones de datos en la base de datos.
+      **Algunos ejemplos populares de sistemas de gestión de bases de datos relacionales son MySQL, Oracle
+      **Database, Microsoft SQL Server y PostgreSQL. Estas bases de datos se utilizan ampliamente en
+      **aplicaciones empresariales y sistemas de información, ya que ofrecen una estructura flexible y
+      **eficiente para almacenar y recuperar datos relacionados.
+
+      **Un sistema de gestión de bases de datos relacionales (RDBMS) almacena los datos en tablas. Cada
+      **tabla recibe un nombre por parte del usuario que la crea. El usuario suele elegir un nombre
+      **relacionado con los datos que se almacenarán en la tabla
+
+     *? Ventajas
+      **Menos redundancia: En un sistema de archivos planos, hay mucha redundancia. Por ejemplo,los nombres
+      **de  autores se  almacenan varias  veces.
+
+      **Prevención de inconsistencias: Si se almacena el mismo fragmento de información en más de un lugar,
+      **los cambios en los datos deben realizarse en todos los lugares en los que se almacenen los datos.
+
+      **Eficacia: Una base de datos suele ser más eficaz que un sistema de archivos planos, debido a
+      **que un fragmento de información se almacena en menos ubicaciones.
+
+      **Integridad de los datos: En un sistema de base de datos, es más fácil mantener la integridad de los
+      **datos porque  a cada columna se asignan tipos de dato potentes.
+
+      **Confidencialidad: Es más fácil mantener la confidencialidad de la información si el
+      **almacenamiento de los datos está centralizado en una ubicación.
+      */
+
     ?>
 
 
