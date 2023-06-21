@@ -1200,7 +1200,28 @@ use App\Detalles;
       **conservar información. Las entidades contienen datos e información que el negocio debe conocer y
       **recordar.
 
+      * !! PHP Avanzado - Identificadores Unicos
+      **En las bases de datos, un identificador único es un atributo o conjunto de atributos que permite
+      **identificar de manera exclusiva cada registro en una tabla. También se le conoce como clave única o
+      **clave primaria. Su función principal es garantizar la integridad y la unicidad de los datos almacenados.
 
+      *? Caracteristicas
+        **Unicidad: Cada valor de un identificador único debe ser único en la tabla. No puede haber
+        **duplicados en ese campo o conjunto de campos.
+
+        **No nulidad: Un identificador único no puede contener valores nulos. Debe tener un valor
+        **definido para cada registro en la tabla.
+
+        **Estabilidad: Los valores de los identificadores únicos deben ser estables y no cambiar con el
+        **tiempo. Se deben evitar los cambios en los valores de los identificadores únicos siempre que
+        **sea posible.
+
+        **Indexación: Los identificadores únicos suelen ser utilizados como base para crear índices en
+        **la tabla. Esto mejora el rendimiento de las consultas y facilita la búsqueda de registros
+        **específicos.
+
+        **Referencialidad: Los identificadores únicos pueden utilizarse como referencias en relaciones
+        **entre tablas, estableciendo claves foráneas para garantizar la integridad referencial.
       */
 
       
