@@ -1222,6 +1222,27 @@ use App\Detalles;
 
         **Referencialidad: Los identificadores únicos pueden utilizarse como referencias en relaciones
         **entre tablas, estableciendo claves foráneas para garantizar la integridad referencial.
+
+        **Un campo de identificación autoincremental: Un número o valor generado automáticamente
+        **para cada registro nuevo en la tabla.
+
+        **Una combinación de campos: Dos o más campos que, cuando se combinan, forman un
+        **identificador único. Por ejemplo, una tabla de empleados podría tener un identificador único
+        **basado en la combinación del número de empleado y el departamento.
+
+        **Un valor único generado externamente: Un identificador único proporcionado por una fuente
+        **externa, como un número de seguro social o un número de identificación fiscal.
+
+        *? Relaciones
+
+        ** Una Relación representa las reglas de negocio que enlazan entidades.Cada relación siempre tiene dos reglas de Negocio.
+
+        ** Las Relaciones representan una asociación entre 2 o mas entidades.
+        ** La línea de relación del diagrama puede ser sólida (obligatoria), discontinua (opcional).
+        ** Estas líneas terminan en una "única punta" (una instancia) o una "pata de gallo" (una o más instacias)
+        ** Las relaciones tienen nombres que ayudan a describir la conexión entre las entidades.
+        ** En el diagrama de relaciones, el nombre de la relación, desde cualquier perspectiva, se imprime cerca del punto de inicio de la relación.
+
       */
 
       
