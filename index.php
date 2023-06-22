@@ -1243,6 +1243,39 @@ use App\Detalles;
         ** Las relaciones tienen nombres que ayudan a describir la conexión entre las entidades.
         ** En el diagrama de relaciones, el nombre de la relación, desde cualquier perspectiva, se imprime cerca del punto de inicio de la relación.
 
+        !! PHP Avanzado- Clave Foránea.
+        
+        **Las claves foráneas, también conocidas como claves externas o claves ajenas (foreign keys en inglés),
+        **son atributos o conjuntos de atributos que se utilizan para establecer relaciones entre dos tablas en
+        **una base de datos relacional. Estas claves foráneas permiten mantener la integridad referencial y
+        **establecer la conexión entre los registros de diferentes tablas.
+        **Cuando una tabla tiene una clave foránea, significa que contiene un atributo (o conjunto de
+        **atributos) que hace referencia a la clave primaria de otra tabla. La clave foránea en una tabla actúa
+        **como una referencia a una fila específica en otra tabla.
+
+        *? Características 
+        ** Relación entre tablas: Las claves foráneas se utilizan para establecer relaciones entre tablas
+        ** relacionadas. Estas relaciones pueden ser de uno a uno, uno a muchos o muchos a muchos, y
+        ** se definen mediante la correspondencia entre la clave foránea y la clave primaria de la tabla
+        ** referenciada.
+
+        ** Integridad referencial: Las claves foráneas garantizan la integridad referencial entre las tablas.
+        ** Esto significa que no se pueden agregar, modificar o eliminar registros en la tabla relacionada
+        ** de una manera que rompa la relación establecida por la clave foránea.
+
+        ** Restricciones de integridad: Las claves foráneas pueden tener restricciones asociadas, como
+        ** la restricción de clave externa (foreign key constraint). Estas restricciones pueden especificar
+        ** acciones como restringir o eliminar en cascada, que definen cómo se deben manejar las
+        ** modificaciones o eliminaciones en la tabla referenciada.
+
+        ** Consultas y operaciones: Las claves foráneas permiten realizar consultas y operaciones que
+        ** involucran múltiples tablas mediante la combinación de información relacionada. Se pueden
+        ** utilizar para realizar JOINs y recuperar datos de manera eficiente.
+        
+        ** Mantenimiento de la consistencia: Las claves foráneas aseguran que los datos relacionados se
+        ** mantengan consistentes en diferentes tablas. Si se actualiza la clave primaria en la tabla
+        ** referenciada, las claves foráneas en otras tablas también se actualizarán automáticamente
+        ** para mantener la integridad de los datos.
       */
 
       
